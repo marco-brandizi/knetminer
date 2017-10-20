@@ -73,8 +73,12 @@ public class LuceneTest
 		OndexServiceProvider ondexServiceProvider = this.startServiceProvider ( oxlPath );
 		
 		Map<ONDEXConcept, Float> hits = ondexServiceProvider.searchLucene ( 
-			"dormancy OR germination OR color OR flavon* OR proanthocyanidin" 
+			"\"seed size\" OR \"grain size\"" 
 		);
+
+		//Map<ONDEXConcept, Float> hits = ondexServiceProvider.searchLucene ( 
+		//	"dormancy OR germination OR color OR flavon* OR proanthocyanidin" 
+		//);
 		
 		Map<ONDEXConcept, Double> geneHits = ondexServiceProvider.getScoredGenesMap ( hits ); 
 		
